@@ -51,16 +51,18 @@ live_loop :try do
   end
   stop
 end
-play :fs5
-sleep x
+define :lie do
+  play :fs5
+  sleep x
+end
+lie
 play :cs5
 sleep 2
 sleep x
 sleep 2
 play :b4
 sleep 2
-play :fs5
-sleep x
+lie
 play :as4
 sleep 2
 sleep x
@@ -74,6 +76,7 @@ w = 1
 end
 clean_fruit ="C:/Users/Christian Huitron/Documents/Audacity/Passionfruit (Clean) - Drake.wav"
 sample clean_fruit
+
 
 
 
