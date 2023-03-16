@@ -55,19 +55,16 @@ define :lie do
   play :fs5
   sleep x
 end
-lie
-play :cs5
-sleep 2
-sleep x
-sleep 2
-play :b4
-sleep 2
-lie
-play :as4
-sleep 2
-sleep x
-sleep x
-sleep x
+sounds = [:fs5, :cs5, :b4, :fs5, :as4,]
+beats = [1, 5, 2, 1, 5]
+i = 0
+j = 0
+5.times do
+  play sounds[i]
+  sleep beats[j]
+  i=i+1
+  j=j+1
+end
 w = 1
 6.times do
   play :as4, amp:w
