@@ -28,13 +28,16 @@ passion_fruit ="C:/Users/Christian Huitron/Documents/Audacity/tomp3.cc - Drake  
 sample passion_fruit
 sleep 23
 use_bpm 120
+define :lie do
+  play :b2, sustain: 0.25
+  sleep 1.5
+end
 use_synth :piano
 live_loop :foo do
   4.times do
     play :e2, sustain: 0.25
     sleep 1.5
-    play :b2, sustain: 0.25
-    sleep 1.5
+    lie
     play :cs3, sustain: 0.25
     sleep x
   end
@@ -44,16 +47,11 @@ live_loop :try do
   4.times do
     play :cs, sustain: 0.25
     sleep 1.5
-    play :b2, sustain: 0.25
-    sleep 1.5
+    lie
     play :cs3, sustain: 0.25
     sleep x
   end
   stop
-end
-define :lie do
-  play :fs5
-  sleep x
 end
 sounds = [:fs5, :cs5, :b4, :fs5, :as4,]
 beats = [1, 5, 2, 1, 5]
@@ -73,7 +71,6 @@ w = 1
 end
 clean_fruit ="C:/Users/Christian Huitron/Documents/Audacity/Passionfruit (Clean) - Drake.wav"
 sample clean_fruit
-
 
 
 
