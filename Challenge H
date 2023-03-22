@@ -1,0 +1,62 @@
+=begin
+
+Functions are great for when the pattern of notes (sleeps) and the actual notes are exactly the same.
+
+Parameterised functions are great for when the pattern of notes is the same but the actual notes are different.
+
+YOUR TASK: Use a parameterised function to optimize the code below.
+
+=end
+x = 0.5
+use_bpm 120
+use_synth :chiplead
+
+
+# MEASURE 1 ---------------------------
+define :mortal do |a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p|
+  play a
+  play b
+  sleep x
+  
+  play c
+  play d
+  sleep x
+  
+  play e
+  play f
+  sleep x
+  
+  play g
+  play h
+  sleep x
+  
+  play i
+  play j
+  sleep x
+  
+  play k
+  play l
+  sleep x
+  
+  play m
+  play n
+  sleep x
+  
+  play o
+  play p
+  sleep x
+end
+2.times do
+  mortal :a4, :a5, :a4, :a5, :c5, :c6, :a4, :a5, :d5, :d6, :a4, :a5, :e5, :e6, :d5, :d6
+  mortal :c5, :c6, :c5, :c6, :e5, :e6, :f4, :f5, :g5, :g6, :c4, :c5, :e5, :e6, :c4, :c5
+  mortal :g4, :g5, :g4, :g5, :b4, :b5, :g4, :g5, :c5, :c6, :g4, :g5, :d5, :d6, :c5, :c6
+  mortal :f4, :f5, :f4, :f5, :a4, :a5, :f4, :f5, :c5, :c6, :f4, :f5, :c5, :c6, :b4, :b5
+end
+kk = "C:/Users/Christian Huitron/Downloads/f6a2b160-c74d-11ed-9c21-416a54c7ecc4.wav"
+sample kk
+sleep 5
+gk = "C:/Users/Christian Huitron/Downloads/3796ce40-c74e-11ed-9d23-0359bcb6ef81.wav"
+sample gk
+sleep 5
+mk = "C:/Users/Christian Huitron/Downloads/6904e0d0-c74d-11ed-b344-3f2f50953428.wav"
+sample mk
