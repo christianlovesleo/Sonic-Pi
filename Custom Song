@@ -1,25 +1,13 @@
 x=1
 k=2
-live_loop :hi do
-  3.times do
-    sample :guit_e_fifths
-    sleep k
-  end
-  stop
-end
-sleep 5
-live_loop :lo do
-  3.times do
-    sample :guit_e_fifths
-    sleep x
-  end
-  stop
-end
-8
+
+angel ="C:/Users/Christian Huitron/Downloads/angelic-vibes-melody_131bpm.wav"
+sample angel
+sleep 7
 live_loop :ho do
   6.times do
-    sample :bd_pure, amp:3
-    sleep x
+    sample :bd_pure, amp:1
+    sleep 3
   end
   stop
 end
@@ -69,8 +57,6 @@ w = 1
   sleep x
   w = w - 0.15
 end
-clean_fruit ="C:/Users/Christian Huitron/Documents/Audacity/Passionfruit (Clean) - Drake.wav"
-sample clean_fruit
 
 
 
