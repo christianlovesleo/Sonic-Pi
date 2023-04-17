@@ -1,0 +1,93 @@
+slow_jam ="C:/Users/Christian Huitron/Documents/Audacity/phone newt.wav"
+sample slow_jam
+sleep 10
+with_fx :sound_out do
+  slower = "C:/Users/Christian Huitron/Documents/Audacity/new.wav"
+  sample slower
+end
+sleep 21
+w = 0.15
+use_bpm 12
+use_synth :piano
+4.times do
+  play :a, amp:w
+  play :f5, amp:w
+  play :d5, amp:w
+  play :a4, amp:w
+  play :d4, amp:w
+  play :d3, amp:w
+  sleep 0.25
+  w = w + 0.15
+end
+1
+use_bpm 12
+use_synth :piano
+define :try do |a, b, c, d, e, f|
+  play :a
+  play :f5
+  play :d5
+  play :a4
+  play :d4
+  play :d3
+  sleep 0.25
+  play :g5
+  play :e5
+  play :c5
+  play :g4
+  play :d4
+  play :d3
+  sleep 0.25
+  play :g5
+  play :e5
+  play :c5
+  play :g4
+  play :d4
+  play :d3
+  sleep 0.25
+  play :g5
+  play :e5
+  play :c5
+  play :g4
+  play :d3
+  sleep 0.25
+  play :g5
+  play :e5
+  play :c5
+  play :g4
+  play :e3
+  sleep 0.25
+  play a
+  play b
+  play c
+  play d
+  play e
+  play f
+  sleep 0.25
+end
+try :e5, :c5, :g4, :d3, :as, :f5
+try :a, :f5, :d5, :a4, :d4, :d3
+use_bpm 12
+use_synth :piano
+sounds = [:a, :f5, :d5, :a4, :d4, :d3]
+beats = [0, 0, 0, 0, 0, 0.25]
+s = 0
+j = 0
+6.times do
+  play sounds [s]
+  sleep beats [j]
+  s = s+1
+  j = j +1
+end
+h = 1
+6.times do
+  play :a,amp:h
+  play :f5,amp:h
+  play :d5,amp:h
+  play :a4,amp:h
+  play :d4,amp:h
+  play :d3,amp:h
+  sleep 0.25
+  h = h-0.15
+end
+song = "C:/Users/Christian Huitron/Documents/Audacity/Slow Jamz final.wav"
+sample song
